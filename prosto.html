@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="prosto.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой</title>
+</head>
+<body>
+  <!-- Вкладка -->
+  <div class="tab">
+    <div class="tab-h active" data-tab="0">Рейтинг</div>
+    <div class="tab-h" data-tab="1">Инкремент</div>
+    <div class="tab-h" data-tab="2">Добавление элемента</div>
+    <div class="tab-h" data-tab="3">Калькулятор</div>
+    <div class="tab-h" data-tab="4">Слайдер</div>
+    <div class="tab-h" data-tab="5">Крестики-Нолики</div>
+    <div class="tab-h" data-tab="6">LocalStorage</div>
+    <div class="tab-h" data-tab="7">Мини слайдер</div>
+    <div class="tab-h" data-tab="8">Часы</div>
+    <div class="tab-h" data-tab="9">Контакт</div>
+    <div class="tab-h" data-tab="10">Прокрутка</div>
+    <div class="tab-h" data-tab="11">Угадай число</div>
+    <div class="tab-h" data-tab="12">Поиск</div>
+  </div>
+  <!-- Рейтинг -->
+   <ul class="ulrai show" style="display: block;">
+      <li id='1'></li>
+      <li id='2'></li>
+      <li id='3'></li>
+      <li id='4'></li>
+      <li id='5'></li>
+    <button class="btn">0</button>
+   </ul>
+   <!-- input range -->
+   <div class="range-div show">
+    <button class="range-value">0</button>
+    <input class="range"  type="range" min=0 max=100 value=0>
+  </div>
+<!-- Добавление элемента -->
+<form class="sub show">
+  <h6>Добавить новый элемент</h6>
+  <label>Тип элемента</label>
+    <select id="elem4">
+        <option value="div">div</option>
+        <option value="ul">ul</option>
+        <option value="li">li</option>
+        <option value="input">input</option>
+      </select>
+      <div class = "add-input">
+    <input id="elem5" type="number" placeholder="Высота">
+    <input id="elem6" type="number" placeholder="Ширина">
+    <input id="elem7" type="text" placeholder="Цвет">
+    <input class="btn1" onclick="addDiv()" type="button" value="Добавить!"/>
+      </div>
+    <div class="AddOut">
+      
+    </div>
+  </form>
+  <!-- Калькулятор -->
+<form class="valuta show">
+  <h1>Калькулятор</h1>
+  <label for="rub">RUB</label>
+  <input class="money" type="text">
+  <label for="usd">USD</label>
+  <input class="money" type="text">
+</form>
+<!-- Слайдер -->
+
+  
+<div class="wrap show">
+        <div class="slider-item">
+          <img style="width: 600px;height: 400px;" src="img/photo1.jpg">
+        </div>
+          <div class="slider-item">
+            <img style="width: 600px;height: 400px;" src="img/photo2.jpg">
+          </div>
+        <div class="slider-item">
+          <img style="width: 600px;height: 400px;" src="img/photo3.jpg">
+        </div>
+        <div class="slider-item">
+          <img style="width: 600px;height: 400px;" src="img/photo4.jpg">
+        </div>
+        <div class="prev" onclick="SliderBtn('prev')">
+          <svg class="bi bi-chevron-compact-left" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 01.223.67L6.56 8l2.888 5.776a.5.5 0 11-.894.448l-3-6a.5.5 0 010-.448l3-6a.5.5 0 01.67-.223z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="next" onclick="SliderBtn('next')">
+          <svg class="bi bi-chevron-compact-right" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 01.671.223l3 6a.5.5 0 010 .448l-3 6a.5.5 0 11-.894-.448L9.44 8 6.553 2.224a.5.5 0 01.223-.671z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+    
+      <div class="slider-dots">
+        <div class="dot dot-active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+</div>
+
+<!-- Крестики-Нолики -->
+<div class="show">
+      <div id="crestiki">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
+      <button class="restart">Заново</button>
+    </div>
+<!-- LocalStorage -->
+      <div class="show">
+        <input type="text" id="in"></input>
+        <button id="add">Add</button>
+        <div id="out-stor"></div>   
+      </div>
+<!-- Мини слайдер -->
+      <div class="tay1 show">
+        <div  class="tar tar-active"></div>
+        <div class="tar"></div>
+        <div class="tar"></div>
+        <div class="tar"></div> 
+        <button class="btn02"></button>
+      </div>
+      <!-- Часы -->
+      <div class="watch show">
+        <img src="img/min.png" class="min" alt="">
+        <img src="img/sec.png" class="sec" alt="">
+        <div class="hour"></div>
+      </div>
+
+      <!-- Контакт -->
+      <div class="show">
+        <!-- <div>
+            <label for="contact-name">Имя:</label> 
+              <input class="contact-name" placeholder="Напишите Имя">
+            <label for="contact-age">Возраст:</label>
+              <input class="contact-age" type="number" placeholder="Напишите Возраст">
+            <button class="addcon" onClick="addContact()">Добавить</button>
+          </div> -->
+            <div id="out">
+           
+            </div>
+         
+      </div>
+<!-- Прокрутка -->
+      <div class="scroll show">
+        <p class="h4">Используйте комментарии, чтобы пояснить свой код: что он делает, за что отвечает, и почему используется выбранное решение.
+
+          (Этот пункт не обязателен, потому что нет смысла ожидать, что код всегда будет хорошо задокументирован. Полезность комментирования 
+          зависит от сложности проекта и может различаться для HTML и CSS кода. )</p>
+          <div class="onetwo">
+          <button class="scroll-button" onclick="ButtonScr('top')">Вверх</button>
+          <button  class="scroll-button" onclick="ButtonScr('bottom')">Вниз</button>
+        </div>
+      </div>
+  <!-- Угадай число -->
+  <div class="show">
+    <h3>Угадай число</h3>
+    <input class="game-value" placeholder="Напиши число">
+    <p class="checkwin"></p>
+    <p class="attempt"></p>
+    <button class="check-button">Проверить</button>
+  </div>
+
+  <!-- Поиск -->
+  <div class="container show">
+                    
+                     <input type="text" id="elastic">
+                      <button class="button-search">Найти</button>
+                   
+                    <ul class="elastic">
+                        <li>Lorem</li>
+                        <li>dolor</li>
+                        <li>sit</li>
+                        <li>amet</li>
+                        <li>consectetur</li>
+                        <li>adipiscing</li>
+                        <li>elit</li>
+                        <li>do</li>
+                        <li>eiusmod</li>
+                        <li>tempor</li>
+                        <li>incididunt</li>
+                        <li>labore</li>
+                    </ul>
+                  </div>
+
+       <script src="script.js" ></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+/*Вкладка*/
+.active {
+  background: red;
+}
+
+.show {
+  display: none;
+  padding-top: 110px;
+}
+
+.tab {
+  top:0px;
+  width: 100%;
+  background: gray;
+  height: 100px;
+  text-align: center;
+  position: fixed;
+  transition: 2s;
+  padding-top: 18px;
+  padding: 22px;
+}
+
+.tab-h{
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  border: 1px solid black;
+  padding:1px;
+  text-align: center;
+}
+
+.tab-h:hover {
+  transition: 1s;
+  background: red;
+}
+/*Рейтинг*/
+.ulrai {
+padding-left:0px;
+}
+
+.ulrai li {
+  display:inline-block;
+  width:50px;
+  height:50px;
+  background:red;
+  transition:0.5s;
+}
+
+.btn {
+  width:50px;
+  height:50px;
+  font-size:20px;
+  background:white;
+}
+
+/*Получение значение*/
+.add-input {
+  width: 200px;
+}
+
+.sub input {
+  border-radius: 20px;
+  outline: none;
+}
+/*Калькулятор*/
+.valuta {
+  width: 200px;
+}
+/*Слайдер*/
+img {
+  width: 20px;
+}
+
+.wrap {
+  text-align: center;
+}
+
+.prev {
+  cursor: pointer;
+  left: 300px;
+  top: 30%;
+  position: absolute;
+}
+
+.next {
+  cursor: pointer;
+  right: 300px;
+  top: 30%;
+  position: absolute;
+}
+
+.dot {
+  background: red;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  display: inline-block;
+  outline: none;
+}
+
+.dot-active {
+  background: green;
+}
+/*Крестики-Нолики*/
+#crestiki {
+  background-color: gray;
+  width: 150px;
+  height: 150px;
+}
+
+.block {
+  width: 50px;
+  height: 50px;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  color:white;
+  border: 1px solid blue;
+  background: red;
+}
+/*LocaleStorage*/
+
+/*Часы*/
+
+.sec, .min {
+	display: block;
+	position: absolute;
+	left: 200px;
+	top: 50;
+  width: 200px;
+
+}
+
+
+/*Прокрутка*/
+.h4 {
+  width: 0px;
+}
+
+.scroll-button {
+  background: blue;
+  color:white;
+  font-size: 20px;
+}
+
+
+.onetwo {
+  position: fixed;
+  right: 30px;
+  bottom: 70px;
+}
+
+
+/*Range*/
+
+
+
+.range {
+  width: 250px;
+  position: absolute;
+  top: 140px;
+  opacity:1
+}
+.range-value {
+  position: absolute;
+  top: 100px;
+}
+
+/*Search*/
+
+.elastic {
+  padding-top:20px;
+}
+
+
+.elastic li.hide {
+  display: none;
+}
+
+mark {
+  color: red;
+  background-color: teal;
+}
+/**/
+.pantera {
+  border:1px solid black;
+}
+
+.Avatar-Class {
+  width: 200px;
+  height: 200px;
+}
+
+.Modal {
+  width: 200px;
+  height: 200px;
+  display: none;
+  background: gray;
+}
